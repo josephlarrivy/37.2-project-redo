@@ -2,8 +2,9 @@ const express = require("express")
 const app = express()
 const itemsRoutes = require("./routes/itemsRoutes")
 const ExpressError = require("./expressError")
+const middleware = require("./middleware")
 
-app.use(express.json)
+app.use(express.json())
 app.use("/items", itemsRoutes)
 
 
